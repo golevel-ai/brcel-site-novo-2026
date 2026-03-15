@@ -27,6 +27,32 @@
 
 //Basic Code End
 
+// Respiro lateral: mais espaço nas bordas para todas as seções
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @include breakpoint(max-lg) {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+  @include breakpoint(max-md) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @include breakpoint(max-sm) {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
 //Video Css Start
 .ripple {
   position: relative;

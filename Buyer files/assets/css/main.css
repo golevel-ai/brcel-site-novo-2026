@@ -8379,6 +8379,55 @@ span {
   position: relative;
 }
 
+/* Respiro lateral: mais espaço nas bordas para todas as seções */
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (max-width: 991px) {
+  .container,
+  .container-fluid,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+}
+@media (max-width: 767px) {
+  .container,
+  .container-fluid,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (max-width: 575px) {
+  .container,
+  .container-fluid,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
 .ripple {
   position: relative;
 }
