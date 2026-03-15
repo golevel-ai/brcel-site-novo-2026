@@ -2015,19 +2015,19 @@ span {
   color: var(--white);
 }
 
-/* Espaço acima da faixa verde para a cabeça da mulher não ser cortada */
+/* Espaço acima da faixa verde para a cabeça da mulher não ser cortada (reduzido 15%) */
 .cta-contact-section.section-padding {
   overflow: visible;
-  padding-top: 220px;
+  padding-top: 187px;
 }
 @media (max-width: 1199px) {
   .cta-contact-section.section-padding {
-    padding-top: 200px;
+    padding-top: 170px;
   }
 }
 @media (max-width: 991px) {
   .cta-contact-section.section-padding {
-    padding-top: 180px;
+    padding-top: 153px;
   }
 }
 .cta-contact-section .container {
@@ -2041,7 +2041,7 @@ span {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  margin-top: 160px;
+  margin-top: 136px;
   overflow: visible;
 }
 @media (max-width: 1399px) {

@@ -1,13 +1,13 @@
-/* Espaço acima da faixa verde para a cabeça da mulher não ser cortada */
+/* Espaço acima da faixa verde para a cabeça da mulher não ser cortada (reduzido 15%) */
 .cta-contact-section.section-padding {
     overflow: visible;
-    padding-top: 220px;
+    padding-top: 187px; /* 220px - 15% */
 
     @include breakpoint(max-xl){
-        padding-top: 200px;
+        padding-top: 170px; /* 200px - 15% */
     }
     @include breakpoint(max-lg){
-        padding-top: 180px;
+        padding-top: 153px; /* 180px - 15% */
     }
 }
 
@@ -22,7 +22,7 @@
     @include flex;
     justify-content: space-between;
     position: relative;
-    margin-top: 160px;
+    margin-top: 136px; /* 160px - 15% */
     overflow: visible;
 
      @include breakpoint (max-xxl){
