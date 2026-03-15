@@ -26,6 +26,13 @@
          @include breakpoint (max-xxl){
           display: none;
         }
+
+        img {
+            max-height: 340px;
+            width: auto;
+            object-fit: contain;
+            object-position: bottom center;
+        }
     }
 
     .content {

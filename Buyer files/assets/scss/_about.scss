@@ -9,6 +9,12 @@
 
     .superhero-image {
         position: relative;
+        overflow: hidden;
+        /* Cápsula: topo arredondado, base reta */
+        border-radius: 200px 200px 0 0;
+        border: 4px solid $theme-color;
+        box-shadow: 0 0 32px rgba(173, 255, 0, 0.45), 0 0 60px rgba(173, 255, 0, 0.2);
+        background-color: #0B0E13;
 
         .eplay-text {
             position: absolute;
@@ -44,19 +50,14 @@
         }
 
         &::before {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            content: "";
-            height: 100%;
-            background-color: #1C1D20;
-            width: 450px;
-            border-radius: 100px 0 0 100px;
-            z-index: -1;
+            display: none;
         }
 
         img {
-            padding-left: 25px;
+            border-radius: 196px 196px 0 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
 
              @include breakpoint (max-sm){
                 padding-left: 0;
@@ -100,17 +101,6 @@
             }
         }
 
-    }
-
-    .middle-shape {
-        position: absolute;
-        bottom: -57%;
-        left: 43%;
-        z-index: -1;
-
-        @include breakpoint (max-lg){
-            display: none;
-        }
     }
 }
 

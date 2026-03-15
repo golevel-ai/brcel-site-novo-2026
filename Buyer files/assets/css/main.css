@@ -503,22 +503,18 @@ span {
   margin-top: 40px;
   width: 360px;
   height: 720px;
+  overflow: hidden;
+  /* Cápsula: topo arredondado, base reta (igual à referência) */
+  border-radius: 200px 200px 0 0;
+  border: 4px solid #ADFF00;
+  box-shadow: 0 0 32px rgba(173, 255, 0, 0.45), 0 0 60px rgba(173, 255, 0, 0.2);
+  background-color: #0B0E13;
 }
 .about-wrapper .superhero-image::before {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: calc(100% + 40px);
-  height: calc(100% + 40px);
-  content: "";
-  background-color: transparent;
-  border-radius: 200px;
-  border: 1px solid var(--theme);
-  z-index: 1;
-  pointer-events: none;
+  display: none;
 }
 .about-wrapper .superhero-image img {
-  border-radius: 180px;
+  border-radius: 196px 196px 0 0;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -528,11 +524,13 @@ span {
     width: 260px;
     height: 520px;
     margin: 0 auto;
+    border-radius: 130px 130px 0 0;
   }
   .about-wrapper .superhero-image img {
     padding-left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 126px 126px 0 0;
   }
 }
 .about-wrapper .superhero-image .game-controller-image {
@@ -564,18 +562,6 @@ span {
     flex-wrap: wrap;
   }
 }
-.about-wrapper .middle-shape {
-  position: absolute;
-  bottom: -57%;
-  left: 43%;
-  z-index: -1;
-}
-@media (max-width: 991px) {
-  .about-wrapper .middle-shape {
-    display: none;
-  }
-}
-
 .about-section {
   position: relative;
 }
@@ -1964,6 +1950,12 @@ span {
   position: absolute;
   bottom: 0;
   left: 26%;
+}
+.cta-wrapper .cta-image img {
+  max-height: 340px;
+  width: auto;
+  object-fit: contain;
+  object-position: bottom center;
 }
 @media (max-width: 1399px) {
   .cta-wrapper .cta-image {
