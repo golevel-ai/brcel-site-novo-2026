@@ -9241,7 +9241,7 @@ span {
   position: relative;
   right: auto;
   bottom: auto;
-  max-width: 560px;
+  max-width: 660px;
   width: 100%;
   margin-left: auto;
   margin-right: 0;
@@ -9249,7 +9249,7 @@ span {
 .hero-1 .hero-image-col .hero-image img {
   width: 100%;
   height: auto;
-  max-height: 520px;
+  max-height: 620px;
   object-fit: contain;
   object-position: bottom right;
 }
