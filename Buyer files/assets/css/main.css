@@ -4161,9 +4161,20 @@ span {
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
 }
+.footer-top-wrapper .footer-logo {
+  display: inline-block;
+  line-height: 0;
+}
+.footer-top-wrapper .footer-logo img {
+  display: block;
+  height: auto;
+  max-height: 50px;
+  width: auto;
+}
 @media (max-width: 1199px) {
   .footer-top-wrapper .footer-logo img {
     width: 120px;
+    max-height: 40px;
   }
 }
 .footer-top-wrapper .location-info {

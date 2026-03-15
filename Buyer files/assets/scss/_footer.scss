@@ -50,9 +50,20 @@
     }
 
     .footer-logo {
+        display: inline-block;
+        line-height: 0;
+
+        img {
+            display: block;
+            height: auto;
+            max-height: 50px;
+            width: auto;
+        }
+
         @include breakpoint (max-xl) {
             img {
                 width: 120px;
+                max-height: 40px;
             }
         }
     }
