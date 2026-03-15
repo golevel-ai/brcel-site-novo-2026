@@ -21,9 +21,10 @@
     .cta-image {
         position: absolute;
         bottom: 0;
-        left: 26%;
+        left: 32%;
+        z-index: 2;
 
-         @include breakpoint (max-xxl){
+         @include breakpoint (max-lg){
           display: none;
         }
 
@@ -50,6 +51,8 @@
     }
 
     .contact-right {
+        position: relative;
+        z-index: 3;
         @include flex;
         gap: 50px;
 

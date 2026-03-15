@@ -130,6 +130,66 @@
         }
     }
 
+    /* Layout duas colunas: conteúdo à esquerda, imagem à direita (mesma altura que o texto) */
+    .hero-1-row {
+        min-height: 480px;
+        align-items: flex-start;
+        @include breakpoint (max-lg) {
+            min-height: 0;
+        }
+    }
+
+    .hero-image-col {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .hero-image-col .hero-image {
+        display: block;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        max-width: 560px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: contain;
+            object-position: bottom right;
+        }
+    }
+
+    .hero-image-mobile {
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        max-width: 280px;
+        margin: 2rem auto;
+        display: block;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .hero-cta-block {
+        margin-top: 8px;
+
+        .hero-text {
+            position: static;
+            margin-top: 24px;
+            margin-bottom: 0;
+            max-width: 380px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.85);
+        }
+    }
+
     .container  {
         max-width: 1730px;
     }
@@ -141,70 +201,62 @@
 
         h1 {
             position: relative;
+            font-size: 72px;
 
             @include breakpoint (max-xxl){
                 line-height: 130%;
             }
 
             @include breakpoint(max-xxl){
-                font-size: 85px;
+                font-size: 72px;
             }
 
             @include breakpoint(max-xl){
-                font-size: 85px;
+                font-size: 68px;
             }
 
             @include breakpoint(max-lg){
-                font-size: 65px;
+                font-size: 56px;
             }
 
             @include breakpoint(max-md){
-                font-size: 55px;
+                font-size: 48px;
             }
 
             @include breakpoint(max-sm){
-                font-size: 38px;
+                font-size: 34px;
             }
 
              @media (max-width: 420px){
-                font-size: 36px;
+                font-size: 32px;
                 line-height: 112%;
             }
 
             .sub-text {
                 color: $theme-color;
-                font-size: 53px;
-                letter-spacing: -1.2px;
+                font-size: 0.85em;
+                letter-spacing: 0.02em;
                 text-transform: uppercase;
-                position: absolute;
-                top: 37px;
-                right: 176px;
+                position: relative;
+                display: inline-block;
+                margin-left: 0.15em;
+                font-weight: 700;
+                text-shadow: 0 0 30px rgba(173, 255, 0, 0.35);
 
                 @include breakpoint (max-xxl){
-                    position: absolute;
-                    top: 0;
-                    font-size: 40px;
-                    right: 165px;
+                    font-size: 0.8em;
                 }
 
                 @include breakpoint(max-lg){
-                    position: absolute;
-                    top: 0;
-                    right: 30px;
-                    font-size: 35px;
+                    font-size: 0.75em;
                 }
 
                 @include breakpoint(max-md){
-                    font-size: 17px;
-                    position: absolute;
-                    top: 0;
+                    font-size: 0.65em;
                 }
 
                  @media (max-width: 420px){
-                    font-size: 14px;
-                    right: 36px;
-                    position: absolute;
-                    top: 0;
+                    font-size: 0.55em;
                 }
             }
 
@@ -330,7 +382,7 @@
             }
 
             @include breakpoint (max-sm){
-                margin-top: 280px;
+                margin-top: 24px;
             }
 
 
@@ -373,28 +425,13 @@
         max-width: 350px;
         font-size: 16px;
         font-weight: 400;
-        position: absolute;
-        bottom: 8%;
-        right: 29%;
-        z-index: 9;
-
-        @include breakpoint (max-xxl){
-            position: static;
-            margin-top: 30px;
-        }
 
         @include breakpoint (max-md) {
-            right: 14%;
             font-size: 15px;
-            bottom: 40%;
-            position: absolute;
         }
 
          @media (max-width: 420px) {
             font-size: 15px;
-            bottom: 42%;
-            right: 4%;
-            position: absolute;
         }
     }
 }

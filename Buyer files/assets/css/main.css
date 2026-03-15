@@ -544,6 +544,77 @@ span {
     display: none;
   }
 }
+
+/* Seção about harmônica: alinhar conteúdo e imagem, preencher espaços */
+.about-wrapper .about-row {
+  align-items: center;
+}
+.about-wrapper .about-content-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 520px;
+  padding: 48px 0 48px 0;
+}
+@media (max-width: 991px) {
+  .about-wrapper .about-content-block {
+    min-height: 0;
+    padding: 32px 0 40px 0;
+  }
+}
+
+/* Imagem da seção about = mesma formatação do top-image da game-wrapper */
+.about-wrapper .top-image.about-section-image {
+  position: relative;
+  top: auto;
+  right: auto;
+  margin-top: 40px;
+  max-width: 460px;
+  max-height: 720px;
+  height: 720px;
+  z-index: 9;
+}
+.about-wrapper .top-image.about-section-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 272px;
+}
+.about-wrapper .top-image.about-section-image .radius-shape {
+  position: absolute;
+  top: 40%;
+  left: -100px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.about-wrapper .top-image.about-section-image .radius-shape img {
+  border-radius: 0;
+}
+.about-wrapper .top-image.about-section-image::before {
+  position: absolute;
+  top: -30px;
+  right: -50px;
+  content: "";
+  border-radius: 1000px;
+  border: 1px solid var(--theme);
+  height: 780px;
+  width: 360px;
+}
+@media (max-width: 1199px) {
+  .about-wrapper .top-image.about-section-image::before {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .about-wrapper .top-image.about-section-image {
+    max-width: 300px;
+    max-height: 560px;
+    height: 560px;
+    margin: 24px auto;
+  }
+}
+
 .about-wrapper .about-content .about-text {
   margin-top: 25px;
 }
@@ -1560,6 +1631,27 @@ span {
   filter: none;
 }
 
+/* Carrossel de ícones: espaçamento para não sobrepor nem ficar atrás da imagem da mulher */
+.brand-section {
+  margin-top: 0;
+  padding-top: 56px;
+  padding-bottom: 64px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  .brand-section {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+}
+@media (max-width: 575px) {
+  .brand-section {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+}
+
 .brand-slider-2 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 25px;
@@ -1949,7 +2041,8 @@ span {
 .cta-wrapper .cta-image {
   position: absolute;
   bottom: 0;
-  left: 26%;
+  left: 32%;
+  z-index: 2;
 }
 .cta-wrapper .cta-image img {
   max-height: 340px;
@@ -1957,7 +2050,7 @@ span {
   object-fit: contain;
   object-position: bottom center;
 }
-@media (max-width: 1399px) {
+@media (max-width: 991px) {
   .cta-wrapper .cta-image {
     display: none;
   }
@@ -1976,6 +2069,8 @@ span {
   display: flex;
   align-items: center;
   gap: 50px;
+  position: relative;
+  z-index: 3;
 }
 @media (max-width: 767px) {
   .cta-wrapper .contact-right {
@@ -4860,6 +4955,50 @@ span {
 .game-wrapper .top-image img {
   border-radius: 272px;
 }
+
+/* Carrossel full width - ocupa 100% da largura da tela */
+.game-wrapper {
+  overflow-x: hidden;
+}
+.game-slider-outer {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  position: relative;
+}
+.game-slider-outer .game-slider-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+.game-slider-outer .game-slider {
+  margin-left: 0;
+}
+
+/* Altura do carrossel reduzida ~50% - proporcional e responsivo */
+.game-slider-outer .game-image-items {
+  max-height: 380px;
+  height: 380px;
+}
+.game-slider-outer .game-image-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 991px) {
+  .game-slider-outer .game-image-items {
+    max-height: 320px;
+    height: 320px;
+  }
+}
+@media (max-width: 575px) {
+  .game-slider-outer .game-image-items {
+    max-height: 260px;
+    height: 260px;
+  }
+}
+
 .game-wrapper .game-image-items {
   margin-top: 30px;
   position: relative;
@@ -8776,6 +8915,7 @@ span {
 }
 .hero-1 .hero-content h1 {
   position: relative;
+  font-size: 72px;
 }
 @media (max-width: 1399px) {
   .hero-1 .hero-content h1 {
@@ -8784,73 +8924,64 @@ span {
 }
 @media (max-width: 1399px) {
   .hero-1 .hero-content h1 {
-    font-size: 85px;
+    font-size: 72px;
   }
 }
 @media (max-width: 1199px) {
   .hero-1 .hero-content h1 {
-    font-size: 85px;
+    font-size: 68px;
   }
 }
 @media (max-width: 991px) {
   .hero-1 .hero-content h1 {
-    font-size: 65px;
+    font-size: 56px;
   }
 }
 @media (max-width: 767px) {
   .hero-1 .hero-content h1 {
-    font-size: 55px;
+    font-size: 48px;
   }
 }
 @media (max-width: 575px) {
   .hero-1 .hero-content h1 {
-    font-size: 38px;
+    font-size: 34px;
   }
 }
 @media (max-width: 420px) {
   .hero-1 .hero-content h1 {
-    font-size: 36px;
+    font-size: 32px;
     line-height: 112%;
   }
 }
 .hero-1 .hero-content h1 .sub-text {
   color: var(--theme);
-  font-size: 53px;
-  letter-spacing: -1.2px;
+  font-size: 0.85em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  position: absolute;
-  top: 37px;
-  right: 176px;
+  position: relative;
+  display: inline-block;
+  margin-left: 0.15em;
+  font-weight: 700;
+  text-shadow: 0 0 30px rgba(173, 255, 0, 0.35);
 }
 @media (max-width: 1399px) {
   .hero-1 .hero-content h1 .sub-text {
-    position: absolute;
-    top: 0;
-    font-size: 40px;
-    right: 165px;
+    font-size: 0.8em;
   }
 }
 @media (max-width: 991px) {
   .hero-1 .hero-content h1 .sub-text {
-    position: absolute;
-    top: 0;
-    right: 30px;
-    font-size: 35px;
+    font-size: 0.75em;
   }
 }
 @media (max-width: 767px) {
   .hero-1 .hero-content h1 .sub-text {
-    font-size: 17px;
-    position: absolute;
-    top: 0;
+    font-size: 0.65em;
   }
 }
 @media (max-width: 420px) {
   .hero-1 .hero-content h1 .sub-text {
-    font-size: 14px;
-    right: 36px;
-    position: absolute;
-    top: 0;
+    font-size: 0.55em;
   }
 }
 .hero-1 .hero-content h1 .dot-shape {
@@ -8972,7 +9103,7 @@ span {
 }
 @media (max-width: 575px) {
   .hero-1 .hero-content .counter-wrap {
-    margin-top: 280px;
+    margin-top: 24px;
   }
 }
 .hero-1 .hero-content .counter-wrap .counter-item {
@@ -9008,32 +9139,71 @@ span {
   max-width: 350px;
   font-size: 16px;
   font-weight: 400;
-  position: absolute;
-  bottom: 8%;
-  right: 29%;
-  z-index: 9;
-}
-@media (max-width: 1399px) {
-  .hero-1 .hero-text {
-    position: static;
-    margin-top: 30px;
-  }
 }
 @media (max-width: 767px) {
   .hero-1 .hero-text {
-    right: 14%;
     font-size: 15px;
-    bottom: 40%;
-    position: absolute;
   }
 }
 @media (max-width: 420px) {
   .hero-1 .hero-text {
     font-size: 15px;
-    bottom: 42%;
-    right: 4%;
-    position: absolute;
   }
+}
+
+/* Hero layout duas colunas */
+.hero-1 .hero-1-row {
+  min-height: 480px;
+  align-items: flex-start;
+}
+@media (max-width: 991px) {
+  .hero-1 .hero-1-row {
+    min-height: 0;
+  }
+}
+.hero-1 .hero-image-col {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.hero-1 .hero-image-col .hero-image {
+  display: block;
+  position: relative;
+  right: auto;
+  bottom: auto;
+  max-width: 560px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: 0;
+}
+.hero-1 .hero-image-col .hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  object-position: bottom right;
+}
+.hero-1 .hero-image-mobile {
+  position: relative !important;
+  right: auto !important;
+  bottom: auto !important;
+  max-width: 280px;
+  margin: 2rem auto;
+  display: block;
+}
+.hero-1 .hero-image-mobile img {
+  width: 100%;
+}
+.hero-1 .hero-cta-block {
+  margin-top: 8px;
+}
+.hero-1 .hero-cta-block .hero-text {
+  position: static;
+  margin-top: 24px;
+  margin-bottom: 0;
+  max-width: 380px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hero-2 {
