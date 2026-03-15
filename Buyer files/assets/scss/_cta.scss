@@ -1,3 +1,20 @@
+/* Espaço acima da faixa verde para a cabeça da mulher não ser cortada */
+.cta-contact-section.section-padding {
+    overflow: visible;
+    padding-top: 220px;
+
+    @include breakpoint(max-xl){
+        padding-top: 200px;
+    }
+    @include breakpoint(max-lg){
+        padding-top: 180px;
+    }
+}
+
+.cta-contact-section .container {
+    overflow: visible;
+}
+
 .cta-wrapper {
     background-color: $theme-color;
     padding: 28px 50px;
@@ -6,6 +23,7 @@
     justify-content: space-between;
     position: relative;
     margin-top: 160px;
+    overflow: visible;
 
      @include breakpoint (max-xxl){
        margin-top: 0;
@@ -23,6 +41,7 @@
         bottom: 0;
         left: 32%;
         z-index: 2;
+        overflow: visible;
 
          @include breakpoint (max-lg){
           display: none;
@@ -33,6 +52,8 @@
             width: auto;
             object-fit: contain;
             object-position: bottom center;
+            /* Garante que o topo da imagem (cabeça) não seja cortado */
+            vertical-align: bottom;
         }
     }
 
