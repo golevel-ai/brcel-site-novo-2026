@@ -501,26 +501,34 @@ span {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  width: 360px;
+  height: 720px;
 }
 .about-wrapper .superhero-image::before {
   position: absolute;
   top: -20px;
-  left: calc(50% - 200px);
-  width: 400px;
-  height: 760px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
   content: "";
   background-color: transparent;
   border-radius: 200px;
   border: 1px solid var(--theme);
-  z-index: -1;
+  z-index: 1;
+  pointer-events: none;
 }
 .about-wrapper .superhero-image img {
   border-radius: 180px;
   object-fit: cover;
-  width: 360px;
-  height: 720px;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 575px) {
+  .about-wrapper .superhero-image {
+    width: 260px;
+    height: 520px;
+    margin: 0 auto;
+  }
   .about-wrapper .superhero-image img {
     padding-left: 0;
     width: 100%;
@@ -8744,6 +8752,11 @@ span {
   bottom: 0;
   right: 75px;
   z-index: 999;
+  max-width: 520px;
+}
+.hero-1 .hero-image img {
+  width: 100%;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
 }
 @media (max-width: 1199px) {
   .hero-1 .hero-image {
