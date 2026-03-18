@@ -7,12 +7,6 @@
     $documentOn.ready( function() {
   
      //>> Mobile Menu Js Start <<//
-      $('#mobile-menu').meanmenu({
-        meanMenuContainer: '.mobile-menu',
-        meanScreenWidth: "1199",
-        meanExpand: ['<i class="far fa-plus"></i>'],
-    });
-
      $('#mobile-menus').meanmenu({
         meanMenuContainer: '.mobile-menus',
         meanScreenWidth: "1920",
@@ -50,15 +44,7 @@
         }
       });      
       
-      // Cursor movement
-      const cursor = document.createElement('div');
-        cursor.classList.add('custom-cursor');
-        document.body.appendChild(cursor);
-
-        document.addEventListener('mousemove', e => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
+    // Remove cursor trail for performance/mobile
       
       //>> Video Popup Start <<//
       $(".img-popup").magnificPopup({
